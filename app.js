@@ -5,7 +5,8 @@ const mongo = require('mongodb').MongoClient;
 const port = process.env['PORT']
 const mongo_host = process.env['MONGO__HOST']
 
-const url = `mongodb://${mongo_host}:27017`
+
+const url = process.env['MONGODB_URI'];
 
 const app = express();
 app.use(express.json());

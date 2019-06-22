@@ -12,5 +12,6 @@ services:
     environment:
       - PORT=8080
       - MONGO__HOST=mongo 
+      - MONGODB_URI=mongodb://mongo:27017
   mongo:
     image: "mongo:4"
