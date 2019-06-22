@@ -5,18 +5,16 @@ const mongo = require('mongodb').MongoClient;
 const port = process.env['PORT'];
 const mongo_host = process.env['MONGO__HOST'];
 
-
 const url = process.env['MONGODB_URI'];
 
+console.log("DEBUG: mongodb url is:", url)
 const app = express();
-
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.json());
-
 
 function getMongoClient() {
     return new Promise((resolve, reject) => {
