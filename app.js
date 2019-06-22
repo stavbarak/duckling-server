@@ -46,7 +46,7 @@ async function init() {
         }, (err, response) => {
             if(err) {
                 console.log("error while trying to write to mongo:", err)
-                res.statusCode(500).send("error while trying to write to database")
+                res.status(500).send("error while trying to write to database")
                 return;
             }
             res.send('done\n')
@@ -57,7 +57,7 @@ async function init() {
         collection.find().toArray(function(err, items) {
             if (err) {
                 console.log("error while trying to query db", err)
-                res.statusCode(500).send("error while trying to query db")
+                res.status(500).send("error while trying to query db")
                 return;
             }
             res.json(items)
