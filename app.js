@@ -25,6 +25,8 @@ function getMongoClient() {
 }
 
 async function init() {
+    console.log('starting...')
+    console.log(port)
     const mongoClient = await getMongoClient();
     const db = mongoClient.db('duckling');
     const collection = db.collection('snippets');
@@ -40,7 +42,7 @@ async function init() {
             res.send(data)
         })
     })
-
+    console.log('ready to listen')
     app.listen(port)
 }
 
