@@ -61,6 +61,8 @@ async function init() {
             res.json(items)
         })
     })
+
+    app.use('/', express.static('client'))
     console.log('ready to listen')
     app.listen(port)
 }
