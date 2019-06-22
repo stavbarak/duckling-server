@@ -32,7 +32,7 @@ async function init() {
     console.log('starting...')
     console.log(port)
     const mongoClient = await getMongoClient();
-    const db = mongoClient.db('duckling');
+    const db = mongoClient.db();
     const collection = db.collection('snippets');
 
     app.post('/snippet/:title', (req, res) => {
