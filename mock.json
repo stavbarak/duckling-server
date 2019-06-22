@@ -1,0 +1,39 @@
+[
+    {
+        "snipId": "1",
+        "title": "meta snippet",
+        "language": "javascript",
+        "category": "documentation",
+        "file" : "App.js",
+        "dateSnipped": "3/5/2019",
+        "content": "const App = () => { \n  return ( \n     <div className='App'> \n        <NoteThumb codeString='bla' /> \n     </div> \n  );\n}",
+        "comments": ["a test snippet", "bla1"],
+        "tags": ["Bla"],
+        "labels": ["#TODO", "#TEST"]
+    },
+    {
+        "snipId": "2",
+        "title": "mapStateToProps",
+        "language": "javascript",
+        "category": "cheat",
+        "file" : "Root.js",
+        "dateSnipped": "3/6/2019",
+        "content": "const mapStateToProps = (state) => ({\n    currentItem: state.snippets.currentItem\n})",
+        "comments": ["another test snippet", "bla2"],
+        "tags": ["Hello", "Bla"],
+        "labels": ["#TODO", "#HACK"]
+    },
+
+    {
+        "snipId": "3",
+        "title": "sort",
+        "language": "javascript",
+        "category": "cheat",
+        "file" : "snippetsReducer.js",
+        "dateSnipped": "3/4/2019",
+        "content": "const dataByDate = [...state.data].sort((a, b) => { \n    return a.dateSnipped > b.dateSnipped ? 1 : -1; \n });",
+        "comments": ["another test snippet", "bla3"],
+        "tags": ["Some", "More", "Labels"],
+        "labels": ["#HACK", "#DEBUG"]
+    }
+]

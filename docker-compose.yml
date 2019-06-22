@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    image: "node:12-alpine"
+    volumes:
+    - ./:/app
+    working_dir: /app
+    command:
+    - app.js
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - MONGO__HOST=mongo 
+  mongo:
+    image: "mongo:4"
